@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="1.2.2">
+  <bpmn:process id="MessageFlow" name="MessageFlow" isExecutable="true" camunda:jobPriority="1" camunda:taskPriority="1">
+    <bpmn:startEvent id="StartEvent_1" name="MessageStart" camunda:initiator="kermit">
+      <bpmn:outgoing>SequenceFlow_1x43qe1</bpmn:outgoing>
+      <bpmn:messageEventDefinition messageRef="Message_0rfrjv5" />
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_1x43qe1" sourceRef="StartEvent_1" targetRef="Task_1aze46l" />
+    <bpmn:serviceTask id="Task_1aze46l" name="ServiceTask" camunda:class="org.camunda.springboot.listener.ProcessMessage">
+      <bpmn:incoming>SequenceFlow_1x43qe1</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_177iyt7</bpmn:outgoing>
+      <bpmn:multiInstanceLoopCharacteristics isSequential="true">
+        <bpmn:loopCardinality xsi:type="bpmn:tFormalExpression">5</bpmn:loopCardinality>
+      </bpmn:multiInstanceLoopCharacteristics>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="SequenceFlow_177iyt7" sourceRef="Task_1aze46l" targetRef="Task_10wn8c7" />
+    <bpmn:scriptTask id="Task_10wn8c7" name="ScriptTask" scriptFormat="javaScript" camunda:resultVariable="name">
+      <bpmn:incoming>SequenceFlow_177iyt7</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1lt15vd</bpmn:outgoing>
+      <bpmn:multiInstanceLoopCharacteristics isSequential="true">
+        <bpmn:loopCardinality xsi:type="bpmn:tFormalExpression">5</bpmn:loopCardinality>
+      </bpmn:multiInstanceLoopCharacteristics>
+      <bpmn:script><![CDATA[var name="Arun";]]></bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:sequenceFlow id="SequenceFlow_1lt15vd" sourceRef="Task_10wn8c7" targetRef="EndEvent_1anfzmt" />
+    <bpmn:endEvent id="EndEvent_1anfzmt" name="MessageEnd">
+      <bpmn:incoming>SequenceFlow_1lt15vd</bpmn:incoming>
+      <bpmn:messageEventDefinition messageRef="Message_0rfrjv5" camunda:class="org.camunda.springboot.listener.ProcessEndMessage" />
+    </bpmn:endEvent>
+  </bpmn:process>
+  <bpmn:message id="Message_0rfrjv5" name="myMessage" />
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="MessageFlow">
+      <bpmndi:BPMNShape id="StartEvent_1044r9q_di" bpmnElement="StartEvent_1">
+        <dc:Bounds x="175" y="126" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="148" y="162" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1x43qe1_di" bpmnElement="SequenceFlow_1x43qe1">
+        <di:waypoint xsi:type="dc:Point" x="211" y="144" />
+        <di:waypoint xsi:type="dc:Point" x="291" y="144" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="206" y="119" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_0up2hr7_di" bpmnElement="Task_1aze46l">
+        <dc:Bounds x="291" y="104" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_177iyt7_di" bpmnElement="SequenceFlow_177iyt7">
+        <di:waypoint xsi:type="dc:Point" x="391" y="144" />
+        <di:waypoint xsi:type="dc:Point" x="464" y="144" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="382.5" y="119" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ScriptTask_1s8ye6f_di" bpmnElement="Task_10wn8c7">
+        <dc:Bounds x="464" y="104" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1lt15vd_di" bpmnElement="SequenceFlow_1lt15vd">
+        <di:waypoint xsi:type="dc:Point" x="564" y="144" />
+        <di:waypoint xsi:type="dc:Point" x="661" y="144" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="567.5" y="119" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="EndEvent_155jhlx_di" bpmnElement="EndEvent_1anfzmt">
+        <dc:Bounds x="661" y="126" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="634" y="162" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

@@ -1,0 +1,52 @@
+https://blog.bernd-ruecker.com/architecture-options-to-run-a-workflow-engine-6c2419902d91
+https://blog.camunda.com/post/2013/10/how-to-send-email-when-usertask-is/
+https://github.com/camunda/camunda-bpm-mail#how-to-configure-it
+https://blog.camunda.com/post/2014/07/embedded-case-management-with-cmmn-in/
+https://docs.camunda.org/manual/7.7/reference/cmmn11/tasks/case-task/
+https://blogs.mulesoft.com/dev/mule-dev/integrating-activiti-bpm-with-jms/
+https://bpt.hpi.uni-potsdam.de/Public/batchProcessing
+https://www.amphinicy.com/blog/view/business_process_modeling/
+https://thecattlecrew.net/2017/02/20/approve-messages-in-camunda-bpm-with-dmn-and-forward-via-camunda-http-connector/
+https://gist.github.com/dodalovic/f578372ba0170785b4ef
+https://blog.bernd-ruecker.com/use-camunda-without-touching-java-and-get-an-easy-to-use-rest-based-orchestration-and-workflow-7bdf25ac198e
+https://stackoverflow.com/questions/28882174/webservice-task-in-camunda
+
+RandomNumeber generator service
+https://www.random.org/integers/?num=1&min=1&max=6&col=1&base=10&format=plain&rnd=new
+https://github.com/camunda/camunda-bpm-examples/tree/master/servicetask/rest-service/src/main/resources
+https://github.com/camunda/camunda-bpm-examples/tree/master/servicetask/rest-service
+https://docs.camunda.org/manual/7.7/reference/bpmn20/events/escalation-events/
+http://sparxsystems.com/enterprise_architect_user_guide/13.0/model_simulation/escalation_event.html
+
+
+
+BPM Parse Listener
+https://github.com/camunda/camunda-bpm-examples/tree/master/process-engine-plugin/bpmn-parse-listener
+
+User Task Timer Event
+https://github.com/FrVaBe/camunda/tree/master/camunda-user-task-demo
+https://github.com/camunda/camunda-bpm-examples/blob/master/deployment/servlet-pa/src/main/resources/exampleProcess.bpmn
+https://forum.camunda.org/t/timer-event-is-not-working/237/8
+escalate
+https://github.com/camunda/camunda-docs-manual/blob/master/content/reference/bpmn20/events/escalation-events.md
+https://github.com/camunda-consulting/code/tree/master/one-time-examples/counterparty-onboarding
+https://groups.google.com/forum/#!topic/camunda-bpm-users/p9kAIJmkpgI
+Docker-
+https://github.com/camunda/docker-camunda-bpm-platform
+
+Error-
+https://github.com/camunda/camunda-docs-manual/blob/master/content/reference/bpmn20/events/error-events.md
+
+Skip Tests
+https://forum.camunda.org/t/skip-task-in-camunda-using-processinstancemodification/3924/2
+
+CamundaSpringBoot
+http://camunda.github.io/camunda-bpm-spring-boot-starter/
+
+
+DataBase Config-
+https://www.esentri.com/blog/2017/07/21/camunda-spring-boot-starter-database-configuration/
+https://medium.com/@joeclever/using-multiple-datasources-with-spring-boot-and-spring-data-6430b00c02e7
+https://stackoverflow.com/questions/50145002/how-to-configure-a-jndi-datasource-with-spring-boot-wildfly-11-0
+https://forum.camunda.org/t/how-to-activate-the-jobexecutor-in-spring-boot-application/4061/3
+https://forum.camunda.org/t/configuration-of-camunda-with-spring-boot/5348/2

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn11.xsd" id="definitions" name="definitions" namespace="http://camunda.org/schema/1.0/dmn">
+  <decision id="decision" name="discount">
+    <decisionTable id="decisionTable">
+      <input id="input1" label="Season">
+        <inputExpression id="inputExpression1" typeRef="string">        <text>season</text>
+</inputExpression>
+      </input>
+      <input id="InputClause_161fgp0" label="GuestCount">
+        <inputExpression id="LiteralExpression_1scd9al" typeRef="integer">        <text>guestCount</text>
+</inputExpression>
+      </input>
+      <output id="output1" label="Dish" name="dish" typeRef="string" />
+      <rule id="row-363098863-1">
+        <description>GoodLuck</description>
+        <inputEntry id="UnaryTests_1qdsqsa">        <text><![CDATA["Fall"]]></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_1ivkinf">        <text><![CDATA[<=8]]></text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_1deulh9">        <text>Fish</text>
+</outputEntry>
+      </rule>
+      <rule id="row-363098863-2">
+        <description>notme</description>
+        <inputEntry id="UnaryTests_1yg048r">        <text><![CDATA["Winter"]]></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_1i9wc3w">        <text><![CDATA[>9]]></text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_1o775ex">        <text>Chicken</text>
+</outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>

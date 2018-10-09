@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmmn:definitions xmlns:dc="http://www.omg.org/spec/CMMN/20151109/DC" xmlns:di="http://www.omg.org/spec/CMMN/20151109/DI" xmlns:cmmndi="http://www.omg.org/spec/CMMN/20151109/CMMNDI" xmlns:cmmn="http://www.omg.org/spec/CMMN/20151109/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camunda="http://camunda.org/schema/1.0/cmmn" id="Test" targetNamespace="http://bpmn.io/schema/cmmn" exporter="Camunda Modeler" exporterVersion="1.2.2">
+  <cmmn:case id="LeaveApprovalCase" name="leaveApprovalCase">
+    <cmmn:casePlanModel id="leaveApprovalCase" name="LeaveApprovalCase" autoComplete="true">
+      <cmmn:planItem id="PlanItem_0v2tlwn" name="CheckApplication" definitionRef="HumanTask_1tsmw7a">
+        <cmmn:itemControl id="PlanItemControl_1q7mh5n">
+          <cmmn:manualActivationRule id="ManualActivationRule_00vcugz">
+            <cmmn:condition id="Expression_14xp6fq">${false}</cmmn:condition>
+          </cmmn:manualActivationRule>
+        </cmmn:itemControl>
+      </cmmn:planItem>
+      <cmmn:planItem id="PlanItem_06fj24b" name="approved" definitionRef="Milestone_14239u3">
+        <cmmn:entryCriterion id="EntryCriterion_0uppf7l" sentryRef="Sentry_1abcbmb" />
+      </cmmn:planItem>
+      <cmmn:planItem id="PlanItem_15ffmns" name="rejected" definitionRef="Milestone_1vdjy00">
+        <cmmn:entryCriterion id="EntryCriterion_008mxdy" sentryRef="Sentry_1v7jioc" />
+      </cmmn:planItem>
+      <cmmn:planItem id="PlanItem_1hdmvde" name="Review" definitionRef="HumanTask_0dbyjod">
+        <cmmn:itemControl id="PlanItemControl_0fjyc3h">
+          <cmmn:manualActivationRule id="ManualActivationRule_1e68kqc">
+            <cmmn:condition id="Expression_0ae2io8">${false}</cmmn:condition>
+          </cmmn:manualActivationRule>
+        </cmmn:itemControl>
+      </cmmn:planItem>
+      <cmmn:sentry id="Sentry_1abcbmb">
+        <cmmn:planItemOnPart id="PlanItemOnPart_0ma5hgo" name="approved" sourceRef="PlanItem_0v2tlwn">        <cmmn:standardEvent>complete</cmmn:standardEvent>
+</cmmn:planItemOnPart>
+        <cmmn:ifPart id="IfPart_06x54np">
+          <cmmn:condition id="Expression_0cdfo1g"><![CDATA[${applicationSufficient && rating > 3}]]></cmmn:condition>
+        </cmmn:ifPart>
+      </cmmn:sentry>
+      <cmmn:sentry id="Sentry_1v7jioc">
+        <cmmn:planItemOnPart id="PlanItemOnPart_1vinecn" name="rejected" sourceRef="PlanItem_0v2tlwn">        <cmmn:standardEvent>complete</cmmn:standardEvent>
+</cmmn:planItemOnPart>
+        <cmmn:ifPart id="IfPart_15qkl9x">
+          <cmmn:condition id="Expression_1k91yld"><![CDATA[${applicationSufficient && rating < 3}]]></cmmn:condition>
+        </cmmn:ifPart>
+      </cmmn:sentry>
+      <cmmn:humanTask id="HumanTask_1tsmw7a" />
+      <cmmn:milestone id="Milestone_14239u3">
+        <cmmn:extensionElements>
+          <camunda:caseExecutionListener event="occur" class="org.camunda.springboot.listener.CaseApprovalListener" />
+        </cmmn:extensionElements>
+      </cmmn:milestone>
+      <cmmn:milestone id="Milestone_1vdjy00">
+        <cmmn:extensionElements>
+          <camunda:caseExecutionListener event="occur" class="org.camunda.springboot.listener.CaseApprovalListener" />
+        </cmmn:extensionElements>
+      </cmmn:milestone>
+      <cmmn:humanTask id="HumanTask_0dbyjod" />
+    </cmmn:casePlanModel>
+  </cmmn:case>
+  <cmmndi:CMMNDI>
+    <cmmndi:CMMNDiagram id="_5a66685b-5f57-4e2f-b1d1-acca4fae04b2">
+      <cmmndi:Size xsi:type="dc:Dimension" width="500" height="500" />
+      <cmmndi:CMMNShape id="DI_CasePlanModel_1" cmmnElementRef="leaveApprovalCase">
+        <dc:Bounds x="167" y="50" width="737" height="389" />
+        <cmmndi:CMMNLabel />
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape id="PlanItem_17vh72v_di" cmmnElementRef="PlanItem_0v2tlwn">
+        <dc:Bounds x="213" y="185" width="100" height="80" />
+        <cmmndi:CMMNLabel />
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape id="PlanItem_06fj24b_di" cmmnElementRef="PlanItem_06fj24b">
+        <dc:Bounds x="500" y="104" width="100" height="40" />
+        <cmmndi:CMMNLabel />
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape id="EntryCriterion_0uppf7l_di" cmmnElementRef="EntryCriterion_0uppf7l">
+        <dc:Bounds x="490" y="110" width="20" height="28" />
+        <cmmndi:CMMNLabel />
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNEdge id="PlanItemOnPart_0ma5hgo_di" cmmnElementRef="PlanItemOnPart_0ma5hgo" targetCMMNElementRef="EntryCriterion_0uppf7l" isStandardEventVisible="true">
+        <di:waypoint xsi:type="dc:Point" x="313" y="225" />
+        <di:waypoint xsi:type="dc:Point" x="402" y="225" />
+        <di:waypoint xsi:type="dc:Point" x="402" y="124" />
+        <di:waypoint xsi:type="dc:Point" x="490" y="124" />
+        <cmmndi:CMMNLabel>
+          <dc:Bounds x="367" y="137.5" width="90" height="20" />
+        </cmmndi:CMMNLabel>
+      </cmmndi:CMMNEdge>
+      <cmmndi:CMMNShape id="PlanItem_15ffmns_di" cmmnElementRef="PlanItem_15ffmns">
+        <dc:Bounds x="500" y="307" width="100" height="40" />
+        <cmmndi:CMMNLabel />
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape id="EntryCriterion_008mxdy_di" cmmnElementRef="EntryCriterion_008mxdy">
+        <dc:Bounds x="490" y="314" width="20" height="28" />
+        <cmmndi:CMMNLabel />
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNEdge id="PlanItemOnPart_1vinecn_di" cmmnElementRef="PlanItemOnPart_1vinecn" targetCMMNElementRef="EntryCriterion_008mxdy" isStandardEventVisible="true">
+        <di:waypoint xsi:type="dc:Point" x="313" y="225" />
+        <di:waypoint xsi:type="dc:Point" x="397" y="225" />
+        <di:waypoint xsi:type="dc:Point" x="397" y="328" />
+        <di:waypoint xsi:type="dc:Point" x="490" y="328" />
+        <cmmndi:CMMNLabel>
+          <dc:Bounds x="352" y="266" width="90" height="20" />
+        </cmmndi:CMMNLabel>
+      </cmmndi:CMMNEdge>
+      <cmmndi:CMMNShape id="PlanItem_1uknvpp_di" cmmnElementRef="PlanItem_1hdmvde">
+        <dc:Bounds x="213" y="313" width="100" height="80" />
+        <cmmndi:CMMNLabel />
+      </cmmndi:CMMNShape>
+    </cmmndi:CMMNDiagram>
+  </cmmndi:CMMNDI>
+</cmmn:definitions>

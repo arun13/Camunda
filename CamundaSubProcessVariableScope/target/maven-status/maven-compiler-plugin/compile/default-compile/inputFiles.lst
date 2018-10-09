@@ -1,0 +1,12 @@
+C:\MyProjects\Camunda\camundaNewWorkspace\CamundaSubProcessVariableScope\src\main\java\org\camunda\springboot\listener\CreateCase.java
+C:\MyProjects\Camunda\camundaNewWorkspace\CamundaSubProcessVariableScope\src\main\java\com\camunda\springboot\plugin\ProcessEnginePluginAdd.java
+C:\MyProjects\Camunda\camundaNewWorkspace\CamundaSubProcessVariableScope\src\main\java\com\camunda\springboot\duedatelistener\AddWatchDuedateParseListener.java
+C:\MyProjects\Camunda\camundaNewWorkspace\CamundaSubProcessVariableScope\src\main\java\org\camunda\springboot\listener\TaskBoundaryTimerListener.java
+C:\MyProjects\Camunda\camundaNewWorkspace\CamundaSubProcessVariableScope\src\main\java\com\camunda\springboot\duedatelistener\CreateWatchDuedateJobTaskListener.java
+C:\MyProjects\Camunda\camundaNewWorkspace\CamundaSubProcessVariableScope\src\main\java\org\camunda\springboot\LeaveApplicaton.java
+C:\MyProjects\Camunda\camundaNewWorkspace\CamundaSubProcessVariableScope\src\main\java\org\camunda\springboot\listener\EscalationTaskListener.java
+C:\MyProjects\Camunda\camundaNewWorkspace\CamundaSubProcessVariableScope\src\main\java\com\camunda\springboot\duedatelistener\UserTaskOverdueJobHandler.java
+C:\MyProjects\Camunda\camundaNewWorkspace\CamundaSubProcessVariableScope\src\main\java\org\camunda\springboot\send\SendTaskEmail.java
+C:\MyProjects\Camunda\camundaNewWorkspace\CamundaSubProcessVariableScope\src\main\java\com\camunda\springboot\duedatelistener\DeleteWatchDuedateJobTaskListener.java
+C:\MyProjects\Camunda\camundaNewWorkspace\CamundaSubProcessVariableScope\src\main\java\org\camunda\springboot\send\SendEmail.java
+C:\MyProjects\Camunda\camundaNewWorkspace\CamundaSubProcessVariableScope\src\main\java\org\camunda\springboot\listener\CaseApprovalListener.java

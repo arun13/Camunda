@@ -1,0 +1,7 @@
+eclipse.m2.WorkspacelifecycleMappingsLocation=C\:/MyProjects/Camunda/camundaNewWorkspace/.metadata/.plugins/org.eclipse.m2e.core/lifecycle-mapping-metadata.xml
+eclipse.m2.defaultRuntime=apache-maven-3.3.3
+eclipse.m2.runtimes=apache-maven-3.3.3
+eclipse.m2.runtimesNodes/apache-maven-3.3.3/location=C\:\\MyProjects\\maven\\apache-maven-3.3.3
+eclipse.m2.runtimesNodes/apache-maven-3.3.3/type=EXTERNAL
+eclipse.m2.userSettingsFile=C\:\\MyProjects\\maven\\apache-maven-3.3.3\\conf\\settings.xml
+eclipse.preferences.version=1

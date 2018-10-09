@@ -1,0 +1,5 @@
+package camunda.workflow;
+
+public class WebProcessApplication {
+
+}

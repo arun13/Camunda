@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.camunda.bpm.engine.delegate.DelegateTask"/>
+<fullyQualifiedTypeName name="org.camunda.bpm.extension.mail.config.MailConfiguration"/>
+<fullyQualifiedTypeName name="org.camunda.bpm.extension.mail.notification.MailNotificationService"/>
+<fullyQualifiedTypeName name="org.camunda.bpm.extension.mail.config.MailConfigurationFactory"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="org.camunda.bpm.spring.boot.starter.configuration.impl.AbstractCamundaConfiguration"/>
+<fullyQualifiedTypeName name="org.camunda.bpm.engine.impl.cfg.ProcessEngineConfigurationImpl"/>
+<fullyQualifiedTypeName name="org.springframework.core.annotation.Order"/>
+<fullyQualifiedTypeName name="org.springframework.core.Ordered"/>
+<fullyQualifiedTypeName name="org.camunda.bpm.engine.impl.bpmn.parser.BpmnParseListener"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="org.camunda.bpm.engine.impl.jobexecutor.JobHandler"/>
+<fullyQualifiedTypeName name="com.camunda.springboot.duedatelistener.AddWatchDuedateParseListener"/>
+<fullyQualifiedTypeName name="com.camunda.springboot.duedatelistener.UserTaskOverdueJobHandler"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.ComponentScan"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="org.camunda.bpm.engine.delegate.DelegateExecution"/>
+<fullyQualifiedTypeName name="org.camunda.bpm.engine.RuntimeService"/>
+<fullyQualifiedTypeName name="org.camunda.bpm.engine.TaskService"/>
+<fullyQualifiedTypeName name="org.camunda.bpm.engine.task.Task"/>
+<fullyQualifiedTypeName name="org.camunda.bpm.engine.runtime.ActivityInstance"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="org.camunda.bpm.application.PostDeploy"/>
+<fullyQualifiedTypeName name="org.camunda.bpm.engine.ProcessEngine"/>
+<fullyQualifiedTypeName name="org.camunda.bpm.engine.CaseService"/>
+<fullyQualifiedTypeName name="org.camunda.bpm.engine.variable.Variables"/>
+<fullyQualifiedTypeName name="org.camunda.bpm.engine.delegate.ExecutionListener"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+<fullyQualifiedTypeName name="org.camunda.bpm.engine.delegate.JavaDelegate"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,12 @@
+org\camunda\springboot\send\SendTaskEmail.class
+org\camunda\springboot\listener\EscalationTaskListener.class
+org\camunda\springboot\listener\TaskBoundaryTimerListener.class
+com\camunda\springboot\duedatelistener\CreateWatchDuedateJobTaskListener.class
+org\camunda\springboot\listener\CreateCase.class
+org\camunda\springboot\send\SendEmail.class
+com\camunda\springboot\duedatelistener\AddWatchDuedateParseListener.class
+org\camunda\springboot\listener\CaseApprovalListener.class
+org\camunda\springboot\LeaveApplicaton.class
+com\camunda\springboot\duedatelistener\UserTaskOverdueJobHandler.class
+com\camunda\springboot\plugin\ProcessEnginePluginAdd.class
+com\camunda\springboot\duedatelistener\DeleteWatchDuedateJobTaskListener.class

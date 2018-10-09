@@ -1,0 +1,17 @@
+TypeVariable
+LocalVariable--Execution,Delegate,DelegateExecution
+Variable
+
+Escalation Event
+ErrorEven without any errorcode
+
+
+
+https://github.com/camunda/camunda-docs-manual/blob/master/content/user-guide/process-engine/expression-language.md
+
+Business Error vs Technical Errors Use case
+Escalation Use Case
+
+Where Boundary Vs Start Vs End events in Camunda
+Scope of variables
+

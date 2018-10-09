@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/1.0" id="Definitions_0hp1g61" name="DRD" namespace="http://camunda.org/schema/1.0/dmn">
+  <decision id="LWPApproval" name="LWP">
+    <extensionElements>
+      <biodi:bounds x="150" y="150" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="decisionTable_1">
+      <input id="input_1">
+        <inputExpression id="inputExpression_1" typeRef="integer">
+          <text>count</text>
+        </inputExpression>
+      </input>
+      <output id="output_1" name="AutoApproval" typeRef="string" />
+      <rule id="DecisionRule_1ek69qs">
+        <description>Rejected</description>
+        <inputEntry id="UnaryTests_1dj48e2">
+          <text>&gt;3</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_028e8qk">
+          <text>AutoReject</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1wpuujb">
+        <description>Approved</description>
+        <inputEntry id="UnaryTests_0b8q0vh">
+          <text>&lt;=3</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_17kndnj">
+          <text>AutoApproved</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>

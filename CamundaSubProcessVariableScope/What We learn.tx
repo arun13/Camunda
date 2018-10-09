@@ -1,0 +1,31 @@
+1. Message Event(Start with message)
+2. Expanded Subprocess
+3. Collapsed subprocess
+4. Multi Tenancy(Multiple engines on shared enviornment)
+5. Asynchronous Transaction boundaries
+6. JMS transactions
+7. Pools
+8. Data Object Reference(Emails,letter,any busines docs)
+9. Data Store Reference(database or filling cabinet)
+
+Camunda Case
+https://github.com/camunda-consulting/code
+https://github.com/camunda-consulting/code/tree/master/one-time-examples/2015-01-webinars/webinar-cmmn
+
+Spring-
+http://www.springboottutorial.com/spring-boot-and-component-scan
+
+JMS-
+https://github.com/camunda-consulting/code/tree/master/snippets/asynchronous-messaging-jms
+
+MessageEvents
+https://blog.camunda.com/post/2014/03/fluent-api-for-message-correlation/
+https://forum.camunda.org/t/how-to-use-message-start-events/4830/2
+https://forum.camunda.org/t/assign-first-task-to-start-user/134/2
+
+Script Task-
+https://blog.camunda.com/post/2014/07/scripting-everywhere-in-camunda-bpm/
+https://forum.camunda.org/t/script-task-result-variable-not-working-with-custom-object/5065
+
+JWT-
+https://jaxenter.com/spring-boot-tutorial-rest-services-and-microservices-135148.html

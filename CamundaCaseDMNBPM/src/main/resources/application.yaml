@@ -1,0 +1,32 @@
+camunda.bpm:
+  admin-user:
+    id: kermit
+    password: superSecret
+    firstName: Kermit
+  filter:
+    create: All tasks
+  job-execution:
+      active: true
+      enabled: true
+      core-pool-size: 3
+#  database:
+#   schema-update: create-drop
+#   type: postgres  
+#  table-prefix: my_schema.
+#  Database configuration
+#  schema-update: create-drop
+#  type: postgres  
+#  table-prefix: my_schema.
+#spring.datasource:
+#  url: "jdbc:postgresql://localhost:5432/mydb"
+#  username: myuser
+#  password: myuser
+#  driverClassName: org.postgresql.Driver
+#spring.datasource:
+#   jndi-name: java:jboss/datasources/bootdemo
+
+#spring.jpa:
+#   generate-ddl: true
+#   open-in-view: true
+#spring.jersey:
+#  application-path:/myapp
