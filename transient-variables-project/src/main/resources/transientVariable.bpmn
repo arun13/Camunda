@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="2.0.3">
+  <bpmn:process id="transientVariable" name="transientVariable" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>SequenceFlow_0acosrm</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0acosrm" sourceRef="StartEvent_1" targetRef="Task_1xixutl" />
+    <bpmn:endEvent id="EndEvent_1uuydg4">
+      <bpmn:incoming>SequenceFlow_1vsckcl</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0rp2nds" sourceRef="Task_1xixutl" targetRef="Task_0bowp7v" />
+    <bpmn:scriptTask id="Task_1xixutl" name="emailCycle" scriptFormat="Javascript" camunda:resultVariable="transient">
+      <bpmn:incoming>SequenceFlow_0acosrm</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0rp2nds</bpmn:outgoing>
+      <bpmn:script>var typedTransientStringValue = Java.type("org.camunda.bpm.engine.variable.value.TypedValue")
+var variable =	Java.type("org.camunda.bpm.engine.variable.Variables")
+typedTransientStringValue = variable.stringValue("foobar", true);
+execution.setVariable("typed",typedTransientStringValue);
+print(typedTransientStringValue.getValue());
+
+////////
+var untransient = "arun";
+execution.setVariable("untransient",untransient);
+typedTransientStringValue</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:sequenceFlow id="SequenceFlow_1vsckcl" sourceRef="Task_0k5txwq" targetRef="EndEvent_1uuydg4" />
+    <bpmn:userTask id="Task_0k5txwq">
+      <bpmn:incoming>SequenceFlow_1rpgnhw</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1vsckcl</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="SequenceFlow_1rpgnhw" sourceRef="Task_0bowp7v" targetRef="Task_0k5txwq" />
+    <bpmn:scriptTask id="Task_0bowp7v" name="getOutPut" scriptFormat="JavaScript">
+      <bpmn:incoming>SequenceFlow_0rp2nds</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1rpgnhw</bpmn:outgoing>
+      <bpmn:script>print(transient);
+print(execution.getVariable("typed"));
+print("untransient");
+print(execution.getVariable("untransient"));</bpmn:script>
+    </bpmn:scriptTask>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="transientVariable">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="173" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0acosrm_di" bpmnElement="SequenceFlow_0acosrm">
+        <di:waypoint x="209" y="120" />
+        <di:waypoint x="316" y="120" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="217.5" y="95" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="EndEvent_1uuydg4_di" bpmnElement="EndEvent_1uuydg4">
+        <dc:Bounds x="780" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="563" y="138" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0rp2nds_di" bpmnElement="SequenceFlow_0rp2nds">
+        <di:waypoint x="416" y="120" />
+        <di:waypoint x="453" y="120" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="385.5" y="95" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ScriptTask_18v3vqr_di" bpmnElement="Task_1xixutl">
+        <dc:Bounds x="316" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1vsckcl_di" bpmnElement="SequenceFlow_1vsckcl">
+        <di:waypoint x="735" y="120" />
+        <di:waypoint x="780" y="120" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="522.5" y="95" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="UserTask_0lhjnv9_di" bpmnElement="Task_0k5txwq">
+        <dc:Bounds x="635" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1rpgnhw_di" bpmnElement="SequenceFlow_1rpgnhw">
+        <di:waypoint x="553" y="120" />
+        <di:waypoint x="635" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ScriptTask_1l3mu6o_di" bpmnElement="Task_0bowp7v">
+        <dc:Bounds x="453" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

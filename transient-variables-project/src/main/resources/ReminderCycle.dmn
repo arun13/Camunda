@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn11.xsd" id="definitions" name="definitions" namespace="http://camunda.org/schema/1.0/dmn">
+  <decision id="reminderKey" name="Reminder Cycle">
+    <decisionTable id="decisionTable">
+      <input id="input1" label="reminderCount">
+        <inputExpression id="inputExpression1" typeRef="integer">        <text>reminderCount</text>
+</inputExpression>
+      </input>
+      <output id="output1" label="waitTime" name="waitTime" typeRef="string" />
+      <rule id="row-612596726-1">
+        <description>Wait Timer for first reminder</description>
+        <inputEntry id="UnaryTests_0sgbe4o">        <text>1</text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_1d8oooo">        <text><![CDATA["PT10S"]]></text>
+</outputEntry>
+      </rule>
+      <rule id="row-612596726-2">
+        <description>Wait Timer for second reminder</description>
+        <inputEntry id="UnaryTests_1c3wy3m">        <text>2</text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_0nmzhzi">        <text><![CDATA["PT5S"]]></text>
+</outputEntry>
+      </rule>
+      <rule id="row-612596726-3">
+        <description>Wait Timer for first reminder</description>
+        <inputEntry id="UnaryTests_0u7etlu">        <text>3</text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_1950twk">        <text><![CDATA["PT10S"]]></text>
+</outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>
